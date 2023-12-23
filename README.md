@@ -64,6 +64,6 @@ Update a data based on its ID using the PUT method:
 
 Delete a data based on its ID using the DELETE method:
 
-- Path: `http://localhost:8080/v1/animal/3``
+- Path: `http://localhost:8080/v1/animal/3`
   (where 3 is the ID of an animal data)
 - The data with ID 3 will be deleted from the database.
