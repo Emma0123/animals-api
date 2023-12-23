@@ -101,7 +101,6 @@ func (h *animalHandler) CreateAnimal(c *gin.Context) {
 
 	}
 
-	// Checking duplicate animal
 	existingAnimal, err := h.animalService.FindByName(animalRequest.Name)
 	if err == nil && existingAnimal.ID != 0 {
 		c.JSON(http.StatusConflict, gin.H{

@@ -19,7 +19,6 @@ func main() {
 		log.Fatal("DB CONNECTION ERROR")
 	}
 
-	// db.AutoMigrate(&animal.RequestAnimals{})
 	db.AutoMigrate(&animal.Animals{})
 
 	animalRepository := animal.NewRepository(db)
@@ -27,8 +26,6 @@ func main() {
 	animalService := animal.NewService(animalRepository)
 
 	animalHandler := handlers.NewAnimalHandler(animalService)
-
-	//============
 
 	router := gin.Default()
 
@@ -42,10 +39,3 @@ func main() {
 
 	router.Run()
 }
-
-// main
-// handler
-// service => terkait dengan logic eg. bisa upload product
-// repository
-// db
-// mysql
